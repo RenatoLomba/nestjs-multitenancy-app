@@ -1,13 +1,13 @@
 import { Inject, Injectable } from '@nestjs/common';
 
-import * as schema from '../../db/schema';
 import { Database, databaseTag } from '../../db/db.module';
+import { NewUser, User, users } from '../../db/schema';
 
 @Injectable()
 export class UsersService {
   constructor(@Inject(databaseTag) private db: Database) {}
 
-  create(user: schema.NewUser): Promise<schema.User[]> {
-    return this.db.insert(schema.users).values(user).returning();
+  async create(user: NewUser): Promise<User> {
+    return (await this.db.insert(users).values(user).returning())[0];
   }
 }
