@@ -12,9 +12,14 @@ docker run --name multitenancy-db -p 5432:5432 -e POSTGRES_PASSWORD=pg123 -d pos
 
 - Then, with your database running, create a ```.env``` file in the root of the project, with the needed environment variables as shown in the ```.env.example``` file.
 
-- Now, install the dependencies and run the app in development mode:
+- With your database running and the .env file created, run the command to create the tables in the schema file into the database with the command:
 
 ```bash
-npm install
+npm run db:push
+```
+
+- Now, run the app in development mode:
+
+```bash
 npm run start:dev
 ```
