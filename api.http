@@ -4,7 +4,7 @@ Content-Type: application/json
 
 {
   "name": "Renato Lomba",
-  "email": "rntlomba4@gmail.com",
+  "email": "rntlomba6@gmail.com",
   "password": "123456"
 }
 
@@ -14,7 +14,15 @@ Content-Type: application/json
 
 {
   "name": "Renato Lomba",
-  "email": "rntlomba5@gmail.com",
+  "email": "rntlomba7@gmail.com",
   "password": "123456"
 }
 
+## Login
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "email": "rntlomba7@gmail.com",
+  "password": "123456"
+}

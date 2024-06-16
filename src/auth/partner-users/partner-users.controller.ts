@@ -1,16 +1,16 @@
 import { Body, Controller, Post } from '@nestjs/common';
 
 import { UserPresenter } from '../users/presenters/user.presenter';
-import { CreatePartnerUserDto } from './dto/create-partner-user.dto';
-import { PartnerUsersService } from './partner-users.service';
+import { UsersService } from '../users/users.service';
+import { CreatePartnerUserDto } from '../users/dto/create-partner-user.dto';
 
 @Controller('partner/users')
 export class PartnerUsersController {
-  constructor(private readonly partnerUsersService: PartnerUsersService) {}
+  constructor(private readonly usersService: UsersService) {}
 
   @Post()
   async create(@Body() user: CreatePartnerUserDto) {
-    const newUser = await this.partnerUsersService.createPartnerUser(user);
+    const newUser = await this.usersService.createPartnerUser(user);
 
     return new UserPresenter(newUser);
   }
