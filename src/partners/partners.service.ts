@@ -11,9 +11,7 @@ export class PartnersService {
     createPartnerDto: CreatePartnerDto,
     userId: number,
   ): Promise<Partner> {
-    let partner: Partner;
-
-    await this.db.transaction(async (tx) => {
+    const partner = await this.db.transaction(async (tx) => {
       const [newPartner] = await tx
         .insert(partners)
         .values(createPartnerDto)
@@ -26,7 +24,7 @@ export class PartnersService {
         })
         .execute();
 
-      partner = newPartner;
+      return newPartner;
     });
 
     return partner;
