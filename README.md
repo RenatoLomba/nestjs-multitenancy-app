@@ -23,3 +23,5 @@ npm run db:push
 ```bash
 npm run start:dev
 ```
+
+- Examples for using the api are in the api.http file.
