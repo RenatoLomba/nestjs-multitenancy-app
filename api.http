@@ -23,15 +23,15 @@ POST http://localhost:3000/auth/login
 Content-Type: application/json
 
 {
-  "email": "rntlomba7@gmail.com",
+  "email": "rntlomba6@gmail.com",
   "password": "123456"
 }
 
 ## Create partner
 POST http://localhost:3000/partners
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsIm5hbWUiOiJSZW5hdG8gTG9tYmEiLCJlbWFpbCI6InJudGxvbWJhN0BnbWFpbC5jb20iLCJyb2xlcyI6WyJQQVJUTkVSIl0sImNyZWF0ZWRBdCI6IjIwMjQtMDYtMTZUMjM6MDA6MDEuMDYxWiIsInVwZGF0ZWRBdCI6IjIwMjQtMDYtMTZUMjM6MDA6MDEuMDYxWiIsImlhdCI6MTcxODU4NDE1OSwiZXhwIjoxNzE4NTg3NzU5fQ.tZXOpPIXUVq1BC3T2FImJrqnTPx--uKQieJJoNYw4VM
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTEsIm5hbWUiOiJSZW5hdG8gTG9tYmEiLCJlbWFpbCI6InJudGxvbWJhNkBnbWFpbC5jb20iLCJyb2xlcyI6WyJVU0VSIl0sImNyZWF0ZWRBdCI6IjIwMjQtMDYtMTZUMjI6NTk6NDguNjg1WiIsInVwZGF0ZWRBdCI6IjIwMjQtMDYtMTZUMjI6NTk6NDguNjg1WiIsImlhdCI6MTcxODU4NTI1MywiZXhwIjoxNzE4NTg4ODUzfQ.9JtmOtK0XQiiPWEA6JCf1ZSUzH_dthXWf2Ft1OwMLpc
 
 {
-  "name": "Empresa do Renato"
+  "name": "Parceiro 2"
 }

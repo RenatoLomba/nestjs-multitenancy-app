@@ -1,24 +1,34 @@
 import { Inject, Injectable } from '@nestjs/common';
 import { CreatePartnerDto } from './dto/create-partner.dto';
 import { Database, databaseTag } from '../db/db.module';
+import { Partner, partners, partnersUsers } from '../db/schema';
 
 @Injectable()
 export class PartnersService {
   constructor(@Inject(databaseTag) private db: Database) {}
 
-  create(createPartnerDto: CreatePartnerDto) {
-    return 'This action adds a new partner';
-  }
+  async create(
+    createPartnerDto: CreatePartnerDto,
+    userId: number,
+  ): Promise<Partner> {
+    let partner: Partner;
 
-  findAll() {
-    return `This action returns all partners`;
-  }
+    await this.db.transaction(async (tx) => {
+      const [newPartner] = await tx
+        .insert(partners)
+        .values(createPartnerDto)
+        .returning();
+      await tx
+        .insert(partnersUsers)
+        .values({
+          partnerId: newPartner.id,
+          userId,
+        })
+        .execute();
 
-  findOne(id: number) {
-    return `This action returns a #${id} partner`;
-  }
+      partner = newPartner;
+    });
 
-  remove(id: number) {
-    return `This action removes a #${id} partner`;
+    return partner;
   }
 }

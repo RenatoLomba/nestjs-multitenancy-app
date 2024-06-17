@@ -15,7 +15,6 @@ export class PartnersController {
     @Body() createPartnerDto: CreatePartnerDto,
     @AuthenticatedUser() user: AuthUser,
   ) {
-    console.log(user);
-    return this.partnersService.create(createPartnerDto);
+    return this.partnersService.create(createPartnerDto, user.id);
   }
 }
