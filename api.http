@@ -1,4 +1,4 @@
-## Create a new regular user
+### Create a new regular user
 POST http://localhost:3000/users
 Content-Type: application/json
 
@@ -8,7 +8,7 @@ Content-Type: application/json
   "password": "123456"
 }
 
-## Create a new partner user
+### Create a new partner user
 POST http://localhost:3000/partner/users
 Content-Type: application/json
 
@@ -18,7 +18,7 @@ Content-Type: application/json
   "password": "123456"
 }
 
-## Login
+### Login
 POST http://localhost:3000/auth/login
 Content-Type: application/json
 
@@ -27,7 +27,7 @@ Content-Type: application/json
   "password": "123456"
 }
 
-## Create partner
+### Create partner
 POST http://localhost:3000/partners
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsIm5hbWUiOiJSZW5hdG8gTG9tYmEiLCJlbWFpbCI6InJudGxvbWJhNUBnbWFpbC5jb20iLCJyb2xlcyI6WyJQQVJUTkVSIl0sImNyZWF0ZWRBdCI6IjIwMjQtMDYtMTZUMjI6NTQ6MTAuNzkzWiIsInVwZGF0ZWRBdCI6IjIwMjQtMDYtMTZUMjI6NTQ6MTAuNzkzWiIsImlhdCI6MTcxODU4NTQ2OCwiZXhwIjoxNzE4NTg5MDY4fQ.1lpRTf_fQn5avfIuLhLUBlSC7OqTxDXmaIRmAF-_ymw
@@ -36,12 +36,12 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsIm5hbWUiO
   "name": "Parceiro 3"
 }
 
-## Get user partners
+### Get user partners
 GET http://localhost:3000/partners
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTEsIm5hbWUiOiJSZW5hdG8gTG9tYmEiLCJlbWFpbCI6InJudGxvbWJhNkBnbWFpbC5jb20iLCJyb2xlcyI6WyJVU0VSIl0sImNyZWF0ZWRBdCI6IjIwMjQtMDYtMTZUMjI6NTk6NDguNjg1WiIsInVwZGF0ZWRBdCI6IjIwMjQtMDYtMTZUMjI6NTk6NDguNjg1WiIsImlhdCI6MTcxODU4OTQ3NiwiZXhwIjoxNzE4NTkzMDc2fQ.mpWb4C0d19HOqD8TY6agUFBSjHzEWMwKMECfEa09m8E
 
-## Create a event
+### Create a event
 POST http://localhost:3000/events
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTEsIm5hbWUiOiJSZW5hdG8gTG9tYmEiLCJlbWFpbCI6InJudGxvbWJhNkBnbWFpbC5jb20iLCJyb2xlcyI6WyJVU0VSIl0sImNyZWF0ZWRBdCI6IjIwMjQtMDYtMTZUMjI6NTk6NDguNjg1WiIsInVwZGF0ZWRBdCI6IjIwMjQtMDYtMTZUMjI6NTk6NDguNjg1WiIsImlhdCI6MTcxODU4OTQ3NiwiZXhwIjoxNzE4NTkzMDc2fQ.mpWb4C0d19HOqD8TY6agUFBSjHzEWMwKMECfEa09m8E
@@ -53,7 +53,7 @@ x-tenant-id: 2
   "startDate": "2024-06-16"
 }
 
-## Get partner events
+### Get partner events
 GET http://localhost:3000/events
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTEsIm5hbWUiOiJSZW5hdG8gTG9tYmEiLCJlbWFpbCI6InJudGxvbWJhNkBnbWFpbC5jb20iLCJyb2xlcyI6WyJVU0VSIl0sImNyZWF0ZWRBdCI6IjIwMjQtMDYtMTZUMjI6NTk6NDguNjg1WiIsInVwZGF0ZWRBdCI6IjIwMjQtMDYtMTZUMjI6NTk6NDguNjg1WiIsImlhdCI6MTcxODU4OTQ3NiwiZXhwIjoxNzE4NTkzMDc2fQ.mpWb4C0d19HOqD8TY6agUFBSjHzEWMwKMECfEa09m8E
