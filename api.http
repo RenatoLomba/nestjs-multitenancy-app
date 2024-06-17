@@ -23,7 +23,7 @@ POST http://localhost:3000/auth/login
 Content-Type: application/json
 
 {
-  "email": "rntlomba5@gmail.com",
+  "email": "rntlomba7@gmail.com",
   "password": "123456"
 }
 
@@ -35,3 +35,8 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsIm5hbWUiO
 {
   "name": "Parceiro 3"
 }
+
+## Get user partners
+GET http://localhost:3000/partners
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsIm5hbWUiOiJSZW5hdG8gTG9tYmEiLCJlbWFpbCI6InJudGxvbWJhN0BnbWFpbC5jb20iLCJyb2xlcyI6WyJQQVJUTkVSIl0sImNyZWF0ZWRBdCI6IjIwMjQtMDYtMTZUMjM6MDA6MDEuMDYxWiIsInVwZGF0ZWRBdCI6IjIwMjQtMDYtMTZUMjM6MDA6MDEuMDYxWiIsImlhdCI6MTcxODU4NjE2MSwiZXhwIjoxNzE4NTg5NzYxfQ.LrBZaG-ydR-hsp6aEUy4dp2JJjjOvw6gWz7B8tzTNrA

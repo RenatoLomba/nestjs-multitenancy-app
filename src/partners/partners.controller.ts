@@ -1,4 +1,4 @@
-import { Controller, Post, Body, UseGuards } from '@nestjs/common';
+import { Controller, Post, Body, UseGuards, Get } from '@nestjs/common';
 
 import { PartnersService } from './partners.service';
 import { CreatePartnerDto } from './dto/create-partner.dto';
@@ -16,5 +16,10 @@ export class PartnersController {
     @AuthenticatedUser() user: AuthUser,
   ) {
     return this.partnersService.create(createPartnerDto, user.id);
+  }
+
+  @Get()
+  getMany(@AuthenticatedUser() user: AuthUser) {
+    return this.partnersService.findManyByUserId(user.id);
   }
 }

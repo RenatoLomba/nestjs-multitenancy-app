@@ -2,6 +2,7 @@ import { Inject, Injectable } from '@nestjs/common';
 import { CreatePartnerDto } from './dto/create-partner.dto';
 import { Database, databaseTag } from '../db/db.module';
 import { Partner, partners, partnersUsers } from '../db/schema';
+import { eq } from 'drizzle-orm';
 
 @Injectable()
 export class PartnersService {
@@ -28,5 +29,16 @@ export class PartnersService {
     });
 
     return partner;
+  }
+
+  async findManyByUserId(userId: number) {
+    return this.db
+      .select({
+        partners,
+      })
+      .from(partners)
+      .leftJoin(partnersUsers, eq(partners.id, partnersUsers.partnerId))
+      .where(eq(partnersUsers.userId, userId))
+      .execute();
   }
 }
