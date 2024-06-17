@@ -23,7 +23,7 @@ POST http://localhost:3000/auth/login
 Content-Type: application/json
 
 {
-  "email": "rntlomba7@gmail.com",
+  "email": "rntlomba4@gmail.com",
   "password": "123456"
 }
 
@@ -44,12 +44,12 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTEsIm5hbWUiO
 ### Create a event
 POST http://localhost:3000/events
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTEsIm5hbWUiOiJSZW5hdG8gTG9tYmEiLCJlbWFpbCI6InJudGxvbWJhNkBnbWFpbC5jb20iLCJyb2xlcyI6WyJVU0VSIl0sImNyZWF0ZWRBdCI6IjIwMjQtMDYtMTZUMjI6NTk6NDguNjg1WiIsInVwZGF0ZWRBdCI6IjIwMjQtMDYtMTZUMjI6NTk6NDguNjg1WiIsImlhdCI6MTcxODU4OTQ3NiwiZXhwIjoxNzE4NTkzMDc2fQ.mpWb4C0d19HOqD8TY6agUFBSjHzEWMwKMECfEa09m8E
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OSwibmFtZSI6IlJlbmF0byBMb21iYSIsImVtYWlsIjoicm50bG9tYmE0QGdtYWlsLmNvbSIsInJvbGVzIjpbIlVTRVIiXSwiY3JlYXRlZEF0IjoiMjAyNC0wNi0xNlQyMjo1MzozNS4yMDFaIiwidXBkYXRlZEF0IjoiMjAyNC0wNi0xNlQyMjo1MzozNS4yMDFaIiwiaWF0IjoxNzE4NjUwMTY4LCJleHAiOjE3MTg2NTM3Njh9.7U6zLiqdD6DJTVA_ZAy723PWO6WFJv4fahSROJXpUig
 x-tenant-id: 2
 
 {
-  "name": "Evento 3",
-  "description": "Teste evento 3",
+  "name": "Evento 4",
+  "description": "Teste evento 4",
   "startDate": "2024-06-16"
 }
 
