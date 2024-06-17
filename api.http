@@ -26,3 +26,12 @@ Content-Type: application/json
   "email": "rntlomba7@gmail.com",
   "password": "123456"
 }
+
+## Create partner
+POST http://localhost:3000/partners
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsIm5hbWUiOiJSZW5hdG8gTG9tYmEiLCJlbWFpbCI6InJudGxvbWJhN0BnbWFpbC5jb20iLCJyb2xlcyI6WyJQQVJUTkVSIl0sImNyZWF0ZWRBdCI6IjIwMjQtMDYtMTZUMjM6MDA6MDEuMDYxWiIsInVwZGF0ZWRBdCI6IjIwMjQtMDYtMTZUMjM6MDA6MDEuMDYxWiIsImlhdCI6MTcxODU4NDE1OSwiZXhwIjoxNzE4NTg3NzU5fQ.tZXOpPIXUVq1BC3T2FImJrqnTPx--uKQieJJoNYw4VM
+
+{
+  "name": "Empresa do Renato"
+}

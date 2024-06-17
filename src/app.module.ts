@@ -6,6 +6,7 @@ import { AppService } from './app.service';
 import { AuthModule } from './auth/auth.module';
 import { DbModule } from './db/db.module';
 import { validate } from './env.validation';
+import { PartnersModule } from './partners/partners.module';
 
 @Module({
   imports: [
@@ -14,6 +15,7 @@ import { validate } from './env.validation';
     }),
     AuthModule,
     DbModule,
+    PartnersModule,
   ],
   controllers: [AppController],
   providers: [AppService],

@@ -1,5 +1,6 @@
 import { sql } from 'drizzle-orm';
 import {
+  integer,
   jsonb,
   pgTable,
   serial,
@@ -19,5 +20,28 @@ export const users = pgTable('users', {
   updatedAt: timestamp('updated_at').$onUpdate(() => sql`CURRENT_TIMESTAMP`),
 });
 
+export const partners = pgTable('partners', {
+  id: serial('id').primaryKey(),
+  name: varchar('name', { length: 255 }).notNull(),
+  createdAt: timestamp('created_at').defaultNow(),
+  updatedAt: timestamp('updated_at').$onUpdate(() => sql`CURRENT_TIMESTAMP`),
+});
+
+export const partnersUsers = pgTable('partners_users', {
+  id: serial('id').primaryKey(),
+  userId: integer('user_id')
+    .notNull()
+    .references(() => users.id),
+  partnerId: integer('partner_id')
+    .notNull()
+    .references(() => partners.id),
+  createdAt: timestamp('created_at').defaultNow(),
+  updatedAt: timestamp('updated_at').$onUpdate(() => sql`CURRENT_TIMESTAMP`),
+});
+
 export type User = typeof users.$inferSelect;
 export type NewUser = typeof users.$inferInsert;
+export type Partner = typeof partners.$inferSelect;
+export type NewPartner = typeof partners.$inferInsert;
+export type PartnerUser = typeof partnersUsers.$inferSelect;
+export type NewPartnerUser = typeof partnersUsers.$inferInsert;
