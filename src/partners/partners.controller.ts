@@ -19,7 +19,7 @@ export class PartnersController {
   }
 
   @Get()
-  getMany(@AuthenticatedUser() user: AuthUser) {
+  findMany(@AuthenticatedUser() user: AuthUser) {
     return this.partnersService.findManyByUserId(user.id);
   }
 }
